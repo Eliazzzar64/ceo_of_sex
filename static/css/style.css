@@ -1,0 +1,453 @@
+/* CONFIGURACIÓN GENERAL Y VARIABLES */
+:root {
+    --preply-pink: #7a2fad; 
+    --dark-text: #121117;
+    --white: #ffffff;
+    --btn-dark: #121117;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+    background-color: var(--white);
+    color: var(--dark-text);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* BARRA DE NAVEGACIÓN */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: var(--preply-pink);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo i, .logo span {
+    font-size: 24px;
+    color: var(--dark-text);
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark-text);
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.nav-actions {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.locale-selector {
+    font-weight: 500;
+    font-size: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.help-icon {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.btn-login {
+    background: transparent;
+    border: 1px solid var(--dark-text);
+    color: var(--dark-text);
+    padding: 10px 16px;
+    border-radius: 8px; 
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.2s;
+}
+
+.btn-login:hover {
+    background-color: rgba(0,0,0,0.05);
+}
+
+/* SECCIÓN HERO (Fondo Rosa) */
+.hero-section {
+    background-color: var(--preply-pink);
+    padding: 60px 40px 100px 40px;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 550px;
+}
+
+.hero-content h1 {
+    font-size: 64px;
+    color: var(--dark-text);
+    line-height: 1.05;
+    margin-bottom: 40px;
+    font-weight: 800;
+    letter-spacing: -2px;
+}
+
+#btn-hero-search {
+    background-color: var(--btn-dark);
+    color: var(--white);
+    border: none;
+    padding: 20px 32px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    transition: transform 0.2s;
+}
+
+#btn-hero-search:hover {
+    transform: scale(1.02);
+}
+
+/* EFECTO CASCADA IMÁGENES DERECHA */
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    height: 400px;
+}
+
+.image-stack {
+    position: relative;
+    width: 450px;
+    height: 380px;
+}
+
+.img-card {
+    position: absolute;
+    width: 320px;
+    height: 380px;
+    border-radius: 12px;
+    box-shadow: -10px 0 20px rgba(0,0,0,0.1);
+}
+
+.card-3 {
+    right: 0;
+    top: 30px;
+    background-color: #e5e7eb;
+}
+
+.card-2 {
+    right: 60px;
+    top: 15px;
+    background-color: #d1d5db;
+}
+
+.card-1 {
+    right: 120px;
+    top: 0;
+    background-color: #f3f4f6; /* Aquí iría la imagen real de la profesora */
+    border: 1px solid rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Recuadro de la mini llamada de video */
+.mini-video-call {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100px;
+    height: 130px;
+    background-color: #9ca3af;
+    border-radius: 8px;
+    border: 2px solid var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 30px;
+}
+
+/* SECCIÓN ESTADÍSTICAS BLANCA INFERIOR */
+.stats-section {
+    background-color: var(--white);
+    padding: 60px 40px;
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    gap: 20px;
+}
+
+.stat-item {
+    flex: 1;
+}
+
+.stat-item h3 {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--dark-text);
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.stat-item p {
+    font-size: 15px;
+    color: #4b5563;
+    font-weight: 500;
+}
+
+.stat-item i {
+    font-size: 18px;
+    color: var(--dark-text);
+}
+
+/* SECCIÓN CLASES DESTACADAS */
+.classes-section {
+    background-color: #f9fafb;
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.classes-section h2 {
+    font-size: 32px;
+    color: var(--dark-text);
+    margin-bottom: 40px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.classes-grid {
+    display: grid;
+    /* Crea columnas adaptables. Mínimo 220px, máximo 1 fracción del espacio */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ACTUALIZACIÓN: Tarjeta principal */
+.class-card {
+    background-color: var(--white);
+    border-radius: 12px;
+    padding: 0; /* Quitamos el padding para que la imagen llegue a los bordes */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Fundamental: hace que la imagen respete los bordes curvos de la tarjeta */
+}
+
+/* Efecto al tener el mouse encima */
+.class-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    border-color: var(--preply-pink);
+}
+
+/* NUEVO: Espacio y comportamiento de la imagen */
+.class-img-container {
+    width: 100%;
+    height: 140px; /* Puedes aumentar o disminuir este valor según tu preferencia */
+    background-color: #f3f4f6;
+    overflow: hidden;
+}
+
+.class-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Evita que la imagen se deforme */
+    transition: transform 0.4s ease;
+}
+
+/* Efecto opcional: la imagen hace un ligero zoom al pasar el mouse */
+.class-card:hover .class-img-container img {
+    transform: scale(1.05);
+}
+
+/* NUEVO: Contenedor que agrupa los textos para devolverles el espaciado interno */
+.class-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Permite que el texto empuje hacia abajo si las tarjetas tienen diferentes alturas */
+}
+
+.class-header h3 {
+    font-size: 20px;
+    color: var(--dark-text);
+    font-weight: 700;
+}
+
+/* Información oculta por defecto (Mismas reglas que ya tenías) */
+.class-info {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.4s ease, margin-top 0.4s ease;
+    text-align: left;
+    font-size: 14px;
+    color: #4b5563;
+}
+
+.class-info p {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.class-info p:last-child {
+    margin-bottom: 0;
+}
+
+.class-info p strong {
+    color: var(--dark-text);
+}
+
+/* Clase activa al hacer clic (Mismas reglas que ya tenías) */
+.class-card.active .class-info {
+    max-height: 250px; 
+    opacity: 1;
+    margin-top: 16px;
+    border-top: 1px solid #e5e7eb;
+    padding-top: 16px;
+}
+
+/* =========================================
+   SECCIÓN DE NOVEDADES (VIDEOS)
+   ========================================= */
+
+.news-section {
+    background-color: var(--white);
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.news-section h2 {
+    font-size: 32px;
+    color: var(--dark-text);
+    margin-bottom: 40px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.video-card {
+    background-color: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border: 2px solid transparent;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.video-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* Mantener una proporción horizontal 16:9 perfecta */
+.video-wrapper {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: #121117;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Estilos para que el video ocupe el contenedor correctamente */
+.video-wrapper video, 
+.video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border: none;
+}
+
+.video-content {
+    padding: 24px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.video-content h3 {
+    font-size: 20px;
+    color: var(--dark-text);
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.video-content p {
+    font-size: 14px;
+    color: #4b5563;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.class-img-container {
+    width: 100%;
+    height: 200px; /* Cambiar de 140px a 200px */
+    background-color: #f3f4f6;
+    overflow: hidden;
+}
