@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}EduFlex - Plataforma Educativa{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-graduation-cap"></i> 
+            <span>EduFlex</span>
+        </div>
+        <nav class="nav-links">
+            <a href="{% url 'servicios' %}">Servicios</a>
+            <a href="{% url 'logros' %}">Logros</a>
+            <a href="{% url 'personal' %}">Personal</a>
+        </nav>
+        <div class="nav-actions">
+            <div class="locale-selector">Español, USD <i class="fa-solid fa-chevron-down"></i></div>
+            <i class="fa-regular fa-circle-question help-icon"></i>
+            <button class="btn-login"><i class="fa-solid fa-arrow-right-to-bracket"></i> Iniciar sesión</button>
+        </div>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

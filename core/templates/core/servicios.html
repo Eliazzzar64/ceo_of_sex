@@ -1,0 +1,127 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Servicios - EduFlex{% endblock %}
+
+{% block content %}
+<main class="hero-section">
+    <div class="hero-container">
+        <div class="hero-content">
+            <h1>Aprende más rápido con los mejores servicios académicos.</h1>
+            <button id="btn-hero-search">Buscar servicio <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+        
+        <div class="hero-image">
+            <div class="image-stack">
+                <img src="{% static 'img/sx.jpg' %}" alt="Servicio 3" class="img-card card-3" style="object-fit: cover;">
+                <img src="{% static 'img/ss.jpg' %}" alt="Servicio 2" class="img-card card-2" style="object-fit: cover;">
+                <div class="img-card card-1" style="background-image: url('{% static 'img/sc.jpg' %}'); background-size: cover; background-position: center;"></div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<section class="stats-section">
+    <div class="stats-grid">
+        <div class="stat-item">
+            <h3>Más de 100 000</h3>
+            <p>estudiantes satisfechos</p>
+        </div>
+        <div class="stat-item">
+            <h3>Más de 300 000</h3>
+            <p>horas de tutorías dictadas</p>
+        </div>
+        <div class="stat-item">
+            <h3>4,8 <i class="fa-solid fa-star"></i></h3>
+            <p>calificación general</p>
+        </div>
+    </div>
+</section>
+
+<section class="classes-section">
+    <h2>Nuestros Servicios Destacados</h2>
+    <div class="classes-grid">
+        
+        <div class="class-card">
+            <div class="class-img-container">
+                <img src="{% static 'img/v1.jpg' %}" alt="Inglés Conversacional">
+            </div>
+            <div class="class-content">
+                <div class="class-header">
+                    <h3>Inglés Conversacional</h3>
+                </div>
+                <div class="class-info">
+                    <p><strong>Descripción:</strong> Práctica intensiva para mejorar tu fluidez y pronunciación con temas del día a día.</p>
+                    <p><strong>Tiempo:</strong> 60 min</p>
+                    <p><strong>Precio:</strong> $15.00 / clase</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="class-card">
+            <div class="class-img-container">
+                <img src="{% static 'img/v2.jpg' %}" alt="Francés para Principiantes">
+            </div>
+            <div class="class-content">
+                <div class="class-header">
+                    <h3>Francés para Principiantes</h3>
+                </div>
+                <div class="class-info">
+                    <p><strong>Descripción:</strong> Aprende las bases del idioma, vocabulario esencial y gramática desde cero.</p>
+                    <p><strong>Tiempo:</strong> 45 min</p>
+                    <p><strong>Precio:</strong> $12.00 / clase</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="class-card">
+            <div class="class-img-container">
+                <img src="{% static 'img/v3.jpg' %}" alt="Programación Web">
+            </div>
+            <div class="class-content">
+                <div class="class-header">
+                    <h3>Programación Web</h3>
+                </div>
+                <div class="class-info">
+                    <p><strong>Descripción:</strong> Domina HTML, CSS, JavaScript y Django construyendo proyectos interactivos.</p>
+                    <p><strong>Tiempo:</strong> 90 min</p>
+                    <p><strong>Precio:</strong> $20.00 / clase</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="class-card">
+            <div class="class-img-container">
+                <img src="{% static 'img/v4.jpg' %}" alt="Matemáticas Avanzadas">
+            </div>
+            <div class="class-content">
+                <div class="class-header">
+                    <h3>Matemáticas Avanzadas</h3>
+                </div>
+                <div class="class-info">
+                    <p><strong>Descripción:</strong> Resolución de problemas complejos, cálculo y álgebra para nivel superior.</p>
+                    <p><strong>Tiempo:</strong> 60 min</p>
+                    <p><strong>Precio:</strong> $18.00 / clase</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="class-card">
+            <div class="class-img-container">
+                <img src="{% static 'img/v5.jpg' %}" alt="Alemán de Negocios">
+            </div>
+            <div class="class-content">
+                <div class="class-header">
+                    <h3>Alemán de Negocios</h3>
+                </div>
+                <div class="class-info">
+                    <p><strong>Descripción:</strong> Vocabulario técnico y formal para entornos corporativos y entrevistas.</p>
+                    <p><strong>Tiempo:</strong> 60 min</p>
+                    <p><strong>Precio:</strong> $22.00 / clase</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+{% endblock %}

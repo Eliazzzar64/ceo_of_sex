@@ -1,0 +1,52 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Logros - EduFlex{% endblock %}
+
+{% block content %}
+<section class="news-section">
+    <h2>Logros Alcanzados</h2>
+    <div class="news-grid">
+        
+        <div class="video-card">
+            <div class="video-wrapper">
+                <video controls poster="{% static 'img/poster1.jpg' %}">
+                    <source src="{% static 'video/novedad1.mp4' %}" type="video/mp4">
+                    Tu navegador no soporta el video.
+                </video>
+            </div>
+            <div class="video-content">
+                <h3>Lanzamiento de plataforma interactiva</h3>
+                <p>Alcanzamos los 100k usuarios activos mediante el desarrollo de un entorno web rápido e interactivo.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <div class="video-wrapper">
+                <video controls poster="{% static 'img/poster2.jpg' %}">
+                    <source src="{% static 'video/novedad2.mp4' %}" type="video/mp4">
+                    Tu navegador no soporta el video.
+                </video>
+            </div>
+            <div class="video-content">
+                <h3>Reconocimiento a Docentes Excelentes</h3>
+                <p>Nuestros capacitadores obtuvieron una valoración general de 4,8 estrellas durante el presente periodo.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <div class="video-wrapper">
+                <video controls poster="{% static 'img/poster3.jpg' %}">
+                    <source src="{% static 'video/novedad3.mp4' %}" type="video/mp4">
+                    Tu navegador no soporta el video.
+                </video>
+            </div>
+            <div class="video-content">
+                <h3>Premio a la Innovación Educativa</h3>
+                <p>Reconocimiento otorgado por la integración tecnológica en tiempo real para entornos de aprendizaje remoto.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+{% endblock %}
